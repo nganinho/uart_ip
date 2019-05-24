@@ -49,15 +49,15 @@ assign start_rx = !RX_ && RX__;
 // baud_cnt_num
 always @ (*) begin 
 	case (baud_rx_sel)
-		3'b000:    baud_cnt_num =   13'd10416;
-		3'b001:    baud_cnt_num =   13'd5208;
-		3'b010:    baud_cnt_num =   13'd2604;
-		3'b011:    baud_cnt_num =   13'd1736;
-		3'b100:    baud_cnt_num =   13'd868;
-		3'b101:    baud_cnt_num =   13'd434;
-		3'b110:    baud_cnt_num =   13'd217;
-		3'b111:    baud_cnt_num =   13'd108;
-		default:   baud_cnt_num = 	13'd10416;
+		3'b000:    baud_cnt_num =   14'd10416;
+		3'b001:    baud_cnt_num =   14'd5208;
+		3'b010:    baud_cnt_num =   14'd2604;
+		3'b011:    baud_cnt_num =   14'd1736;
+		3'b100:    baud_cnt_num =   14'd868;
+		3'b101:    baud_cnt_num =   14'd434;
+		3'b110:    baud_cnt_num =   14'd217;
+		3'b111:    baud_cnt_num =   14'd108;
+		default:   baud_cnt_num = 	14'd10416;
 	endcase
 end
 

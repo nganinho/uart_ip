@@ -46,7 +46,7 @@ add wave -noupdate -expand -group RX /testbench/dut/uart_rx/RX__
 add wave -noupdate -expand -group RX /testbench/dut/uart_rx/RX_
 add wave -noupdate -expand -group RX /testbench/dut/uart_rx/RX
 TreeUpdate [SetDefaultTree]
-WaveRestoreCursors {{Cursor 1} {2438 ps} 0}
+WaveRestoreCursors {{Cursor 1} {18547 ps} 0}
 quietly wave cursor active 1
 configure wave -namecolwidth 359
 configure wave -valuecolwidth 40

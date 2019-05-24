@@ -9,20 +9,21 @@
 module uart_ip  (
 	input wire 			clock,
 	input wire 			resetn,
-	// from reg
+// from reg
 	input wire 			uart_en,
 	input wire [2:0]	baud_rx_sel,
 	input wire [2:0]	baud_tx_sel,
 	input wire 			start_tx,
-	//input wire 			mode,
+//input wire 			mode,
 	input wire [7:0]	data_in,
-	//to reg 
+
+//to reg 
 	output wire 		rec_valid,
 	output wire [7:0] 	rec_dat,
 	output wire 		tx_done,
-	// UART 
+// UART 
 	output wire TX,
-	input wire RX
+	input  wire RX
 );
 
 // UART_TX

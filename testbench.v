@@ -33,7 +33,7 @@ module testbench();
 		clock 		= 1'b0;
 		resetn 		= 1'b0;
 		uart_en 	= 1'b1;
-		baud_tx_sel 	= 3'b111;
+		baud_tx_sel 	= 3'b101;
 		baud_rx_sel 	= 3'b111;
 		start_tx	= 1'b0;
 		data_in		= 7'h5a;	
@@ -47,10 +47,19 @@ module testbench();
 	
 	// 
 	initial begin 
-	#10000; resetn 	= 1'b1;
-	#100; start_tx 	= 1'b1;
-	#30;  start_tx	= 1'b0;
+		#100; 	resetn 		= 1'b1;
+		#1000; 	start_tx 	= 1'b1;
+		#30;  	start_tx	= 1'b0;
 		
+		#10000;
+		RX = 1'b0;
+		
+		#1080; RX = ~RX;
+		#1080; RX = ~RX;
+		#1080; RX = ~RX;
+		#1080; RX = ~RX;
 	end
+	
+	
 	 
 endmodule

@@ -81,7 +81,7 @@ end
 
 // point of each baud rate period
 assign baud_time 	= (baud_cnt == baud_cnt_num ) 		? 1'b1 : 1'b0;
-assign latch_time 	= (baud_cnt == (baud_cnt_num - 20)) ? 1'b1 : 1'b0;
+assign latch_time 	= (baud_cnt == (baud_cnt_num - 20) && (state_rx == `DATA)) ? 1'b1 : 1'b0;
 assign rec_valid 	= (baud_cnt == (baud_cnt_num - 20) && (state_rx == `STOP)) ? 1'b1 : 1'b0;
 
 // state_end
@@ -142,8 +142,8 @@ always @ (posedge clock) begin
 		rec_dat <= 8'h00;
 	end
 	else begin
-		if ( start_rx == `DATA ) begin
-			if (latch_time) rec_dat[data_cnt] 	<=	RX__;
+		if ( state_rx == `DATA ) begin
+			if (latch_time) rec_dat 	<=	{RX__, rec_dat[7:1]};
 		end
 	end
 end 

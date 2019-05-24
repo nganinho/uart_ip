@@ -8,8 +8,9 @@ Version1 - 2019-05-22
 2. No parity
 3. 8bit data
 4. AXI-Lite interface for register accessing
-# NO----------------------
-5. No BUSRT transfer
-6. No Dual UART
-7. No Quad UART
-8. No interrupt function
+
+# Planning----------------------
+1. BUSRT transfer
+2. Dual UART
+3. No Quad UART
+4. No interrupt function
